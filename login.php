@@ -24,7 +24,6 @@
 	if(mysql_num_rows($result)>0){
 		while($row = mysql_fetch_assoc($result)){
 			$databasepwd=$row["Password"];
-			$name=$row["Name"];
 			$icon =$row["Icon"];
 			$background=$row["Background"];
 			//Testing purposes below
