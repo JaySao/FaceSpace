@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+#title{
+
+	text-align:center;
+}
+
+#logo {
+	float:top;
+	height:10%;
+	background-color:blue;
+	color:white;
+	padding-bottom:10px;
+}
+
+#forminfo {
+	font-weight:bold;
+}
+
+#regbutton {
+	text-align:center;
+}
+/* Create two unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+
+}
+
+.left {
+  width: 50%;
+  text-align:center;
+}
+
+.right {
+  width: 50%;
+}
+
+.right img {
+	height:90px;
+	width:300px;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
