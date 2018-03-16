@@ -24,7 +24,7 @@
 		else if ($answer1 == "E") { $icon="./lobster.png"; }
 		else { $icon="./turtle.png"; }
 
-		if ($answer2 == "A") { $background="./black.jpg"; }
+	if ($answer2 == "A") { $background="./black.jpg"; }
 		else if ($answer2 == "B") { $background="./blue.jpg"; }
 		else if ($answer2 == "C") { $background="./slate.jpg"; }
 		else if ($answer2 == "D") { $background="./purple.jpg"; }
@@ -37,7 +37,7 @@
 	}
 
 	print("<br/>");
-	//$sql = "INSERT INTO project3 (Username, Password, Icon,Background,Status, Wall1,Wall2,Wall3,Wall4, Wall5,Wall6,Wall7,Wall8,Wall9,Wall10 ) VALUES('$regusername','$regpassword','$icon,$background,null,null,null,null,null,null,null,null,null,null,null)";
+	$sql = "INSERT INTO project3 (Username, Password, Icon,Background,Status, Wall1,Wall2,Wall3,Wall4, Wall5,Wall6,Wall7,Wall8,Wall9,Wall10 ) VALUES('$regusername','$regpassword','$icon','$background','null','null','null','null','null','null','null','null','null','null','null')";
 	
 	if( mysql_query($sql)){
 		print("<br/>");
@@ -47,6 +47,8 @@
 		print("NOT WRITTEN Username Taken");
 		print("<br/><a href='register.html'>RETURN TO REGISTER</a><br/>");
 	}
+	
+	//Testing below
 	 echo "$regusername";
 	 print("<br/>");
 	 echo "$regpassword";
