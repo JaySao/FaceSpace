@@ -37,7 +37,8 @@
 		echo "login OK!";
 		session_start(); 
 		$_SESSION['Username'] = $username;
-		$_SESSION['Name'] = $name;
+		$_SESSION['Icon'] = $icon;
+		$_SESSION['Background'] = $background;
 		header('Location: user_home.php');
 	}else{
 		echo "Login Failed ";

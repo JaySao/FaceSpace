@@ -15,7 +15,7 @@
 	 $regpassword = $_POST['password'];
 	 $repassword = $_POST['repassword'];
 	 $answer1 = $_POST['question-1-answers'];
-	 $answer2 = $_POST['question-1-answers'];
+	 $answer2 = $_POST['question-2-answers'];
 	 
 	 if ($answer1 == "A") { $icon="./bird.png"; }
 		else if ($answer1 == "B") { $icon="./snail.png"; }
