@@ -5,18 +5,18 @@
 	<link rel="stylesheet" href="./styler.css">
 </head>
 <body>
-<div id="logo">
-	<h1>FaceSpace</h1>
-</div>	
-	<div id="title">
-		<form action="register.php" method="post" id="forminfo">
-		<br/>Enter your Username:<input type="text" name="username"><br/>
-		<br/>Password:<input type="text" name="password"><br/>
-		<br/>Re-type Password:<input type="text" name="repassword"><br/>
-	</div>
+<header>
+	<h1>Register My FaceSpace!</h1>
+</header>	
 
 		<div class="row">
-			<div class="column left">
+			<div class="register left">
+				<form action="register.php" method="post" id="forminfo">
+				<br/>Enter your Username:<input type="text" name="username"><br/>
+				<br/>Password:<input type="text" name="password"><br/>
+				<br/>Re-type Password:<input type="text" name="repassword"><br/>
+			</div>
+			<div class="register middle">
 				<h3>Choose a profile picture</h3>	
 				<div>
 					<input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
@@ -43,7 +43,7 @@
 					<label for="question-1-answers-F"><img src="./turtle.png"></label>
 				</div>
 			</div>
-			<div class="column right">	
+			<div class="register right">	
 				<h3>Choose your personal background</h3>
 				<div>
 					<input type="radio" name="question-2-answers" id="question-2-answers-A" value="A" />
@@ -65,11 +65,9 @@
 					<input type="radio" name="question-2-answers" id="question-2-answers-E" value="E" />
 					<label for="question-2-answers-E"><img src="./wood.jpg"></label>
 				</div>
+				<input class="signupbutton" type="submit" value="Register">
 				
 			</div>
-				<div id="regbutton">
-					<input type="submit" value="Register">
-				</div>
 		</form>
 		</div>	
 		<br/>
