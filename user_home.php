@@ -16,6 +16,12 @@ $background=$_SESSION["Background"];
 $username = $_SESSION['Username'];
 ?>
 <div class="pagewrap" style="background-image: url('<?php echo $background;?>')">
+	
+	<header>
+		<h1>My FaceSpace</h1>
+	</header>
+
+
 	<div id="navbar">
 		<div id="profilepic">
 			<a href="edit_profile.html">Edit Profile</a>
