@@ -59,7 +59,7 @@
 	}
 	
 	if( mysql_query($sql2)){
-		header('Location: user_home.php');
+		header("Location: friend_home.php?fname=$fname");
 	}else{
 		print("Error");
 		print("<br/><a href='user_home.php'>Return Home</a><br/>");
