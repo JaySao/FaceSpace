@@ -26,6 +26,7 @@
 			$databasepwd=$row["Password"];
 			$icon =$row["Icon"];
 			$background=$row["Background"];
+			$logged=$row["LoggedIn"];
 			//Testing purposes below
 			echo " $enteredpwd ";
 			echo " ";
@@ -39,6 +40,9 @@
 		$_SESSION['Username'] = $username;
 		$_SESSION['Icon'] = $icon;
 		$_SESSION['Background'] = $background;
+		$query= "UPDATE project3 SET LoggedIn='1' WHERE Username='$username'";
+		$logged=mysql_query($query);
+		$_SESSION['LoggedIn']=$logged;
 		header('Location: user_home.php');
 	}else{
 		echo "Login Failed ";

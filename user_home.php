@@ -15,16 +15,17 @@ include("config.php");
 $icon=$_SESSION['Icon'];
 $background=$_SESSION["Background"];
 $username = $_SESSION['Username'];
+$logged=$_SESSION['LoggedIn'];
 ?>
 <div class="pagewrap" style="background-image: url('<?php echo $background;?>')">
 	<div id="navbar">
 		<div id="profilepic">
 			<a href="edit_profile.html">Edit Profile</a>
-			<a href='home.html'>LOGOUT</a>
+			<a href='logout.php'>LOGOUT</a>
 			
 		
 		<?php
-		
+		print($logged);
 		print("<h1>Hello ". $username." </h1>");
 		//print("<h4>Your icon is: </h4>");
 		//print($_SESSION['Icon']);
