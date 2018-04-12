@@ -3,61 +3,62 @@
 <head>
 	<title>Edit Profile</title>
 	<link rel="stylesheet" href="./styler.css">
+	<script src="./edit.js"></script>
 </head>
 <body>
 <header>
 	<h1>Edit My FaceSpace</h1>
-</header>>
+</header>
 		<form action="edit_profile.php" method="post" id="forminfo">
 
 		<div class="row">
 			<div class="column left">
 				<h3>Edit your profile picture</h3>
 				<div>
-					<input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
+					<input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" onclick='check_logo(1)'/>
 					<label for="question-1-answers-A"><img src="./bird.png"> </label>
 				</div>
 				<div>
-					<input type="radio" name="question-1-answers" id="question-1-answers-B" value="B" />
+					<input type="radio" name="question-1-answers" id="question-1-answers-B" value="B" onclick='check_logo(2)'/>
 					<label for="question-1-answers-B"><img src="./snail.png"></label>
 				</div>
 				<div>
-					<input type="radio" name="question-1-answers" id="question-1-answers-C" value="C" />
+					<input type="radio" name="question-1-answers" id="question-1-answers-C" value="C" onclick='check_logo(3)'/>
 					<label for="question-1-answers-C"><img src="./rabbit.png"></label>
 				</div>
 				<div>
-					<input type="radio" name="question-1-answers" id="question-1-answers-D" value="D" />
+					<input type="radio" name="question-1-answers" id="question-1-answers-D" value="D" onclick='check_logo(4)'/>
 					<label for="question-1-answers-D"><img src="./fish.png"></label>
 				</div>
 				<div>
-					<input type="radio" name="question-1-answers" id="question-1-answers-E" value="E" />
+					<input type="radio" name="question-1-answers" id="question-1-answers-E" value="E" onclick='check_logo(5)'/>
 					<label for="question-1-answers-E"><img src="./lobster.png"></label>
 				</div>
 				<div>
-					<input type="radio" name="question-1-answers" id="question-1-answers-F" value="F" />
+					<input type="radio" name="question-1-answers" id="question-1-answers-F" value="F" onclick='check_logo(6)'/>
 					<label for="question-1-answers-F"><img src="./turtle.png"></label>
 				</div>
 			</div>
 			<div class="column right">
 				<h3>Edit your personal background</h3>
 				<div>
-					<input type="radio" name="question-2-answers" id="question-2-answers-A" value="A" />
+					<input type="radio" name="question-2-answers" id="question-2-answers-A" value="A" onclick='check_back(1)'/>
 					<label for="question-2-answers-A"><img src="./black.jpg"></label>
 				</div>
 				<div>
-					<input type="radio" name="question-2-answers" id="question-2-answers-B" value="B" />
+					<input type="radio" name="question-2-answers" id="question-2-answers-B" value="B" onclick='check_back(2)'/>
 					<label for="question-2-answers-B"><img src="./blue.jpg"></label>
 				</div>
 				<div>
-					<input type="radio" name="question-2-answers" id="question-2-answers-C" value="C" />
+					<input type="radio" name="question-2-answers" id="question-2-answers-C" value="C" onclick='check_back(3)'/>
 					<label for="question-2-answers-C"><img src="./slate.jpg"></label>
 				</div>
 				<div>
-					<input type="radio" name="question-2-answers" id="question-2-answers-D" value="D" />
+					<input type="radio" name="question-2-answers" id="question-2-answers-D" value="D" onclick='check_back(4)'/>
 					<label for="question-2-answers-D"><img src="./purple.jpg"></label>
 				</div>
 				<div>
-					<input type="radio" name="question-2-answers" id="question-2-answers-E" value="E" />
+					<input type="radio" name="question-2-answers" id="question-2-answers-E" value="E" onclick='check_back(5)'/>
 					<label for="question-2-answers-E"><img src="./wood.jpg"></label>
 				</div>
 				<input class="editbutton" type="submit" value="Confirm">
@@ -66,7 +67,12 @@
 		</form>
 		</div>
 		<br/>
-
+	
+	<div id="imagedest">
+	</div>
+	
+	<div id="backdest">
+	</div>
 
 </body>
 </html>

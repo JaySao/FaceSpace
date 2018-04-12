@@ -67,6 +67,7 @@ print("<div class='row'>");
 		print("<h2>FRIENDS</h2>");
 		if(mysql_num_rows($result)>0){
 			$i=0;
+			print('<div id="frdiv">');
 			while($row = mysql_fetch_assoc($result)){
 				$friends = $row["Username"];
 				print("<div id='friends'><a href='friend_home.php?fname=$friends'>$friends</a><br/> </div>");
@@ -75,6 +76,7 @@ print("<div class='row'>");
 				//Testing purposes below
 				
 			}
+			print('</div>');
 		}
 	
 	
