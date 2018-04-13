@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Edit profile</title>
+	<title>Status</title>
 	<link rel="stylesheet" href="./styler.css">
 </head>
 
@@ -24,7 +24,6 @@
 		print("<br/><a href='user_home.php'>Return Home</a><br/>");
 	}
 	header();
-
 ?>
 </body>
 </html>
