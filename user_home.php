@@ -33,7 +33,8 @@ $logged=$_SESSION['LoggedIn'];
 		//print($_SESSION['Background']);
 		print ("<img id='icon' src='".$icon."'>");
 		$sql = "SELECT * FROM project3 WHERE Username !='$username'";
-		$sqlMe = "SELECT * FROM project3 WHERE Username ='$username'"; 
+		$sqlMe = "SELECT * FROM project3 WHERE Username ='$username'";
+		$sqlWall = "SELECT * FROM wallposts WHERE Username ='$username'";  
  
 	
 		$result = mysql_query($sql);
@@ -41,6 +42,11 @@ $logged=$_SESSION['LoggedIn'];
 		if(mysql_num_rows($resultMe)>0){
 			while($rowMe = mysql_fetch_assoc($resultMe)){
 				$status = $rowMe['Status'];
+			}
+		}
+		$resultWall = mysql_query($sqlWall);
+		if(mysql_num_rows($resultWall)>0){
+			while($rowMe = mysql_fetch_assoc($resultWall)){
 				$wall1 = $rowMe['Wall1'];
 				$wall2 = $rowMe['Wall2'];
 				$wall3 = $rowMe['Wall3'];
@@ -53,6 +59,7 @@ $logged=$_SESSION['LoggedIn'];
 				$wall10 = $rowMe['Wall10'];
 			}
 		}
+
 
 		
 print("<div class='row'>");
