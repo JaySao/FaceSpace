@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Edit profile</title>
+	<title>Confirm</title>
 	<link rel="stylesheet" href="./styler.css">
 </head>
 
