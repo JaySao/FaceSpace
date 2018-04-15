@@ -70,7 +70,13 @@ print("<div class='row'>");
 			print('<div id="frdiv">');
 			while($row = mysql_fetch_assoc($result)){
 				$friends = $row["Username"];
-				print("<div id='friends'><a href='friend_home.php?fname=$friends'>$friends</a><br/> </div>");
+				$friendLogged = $row["LoggedIn"];
+				print("<div id='friends'><a href='friend_home.php?fname=$friends'>$friends</a>");
+					if($friendLogged==0){
+						print("<img style='height:20px; width:20px;' id='logicon' src='./offline.png'><br/> </div>");
+					}else{
+						print("<img style='height:20px; width:20px;' id='logicon' src='./online.png'><br/> </div>");
+					}
 				$ficon =$row["Icon"];
 				$fbackground=$row["Background"];
 				//Testing purposes below
