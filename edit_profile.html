@@ -14,6 +14,9 @@
 		<div class="row">
 			<div class="column left">
 				<h3>Edit your profile picture</h3>
+				<style type="text/css">
+					h3 { color:black; }
+				</style>
 				<div>
 					<input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" onclick='check_logo(1)'/>
 					<label for="question-1-answers-A"><img src="./bird.png"> </label>
@@ -39,11 +42,19 @@
 					<label for="question-1-answers-F"><img src="./turtle.png"></label>
 				</div>
 			</div>
+			<div class="column middle">
+				<h3>Preview</h3>
+				<div id="imagedest">
+				</div>
+				<div id="backdest">
+					
+				</div>
+			</div>
 			<div class="column right">
 				<h3>Edit your personal background</h3>
 				<div>
 					<input type="radio" name="question-2-answers" id="question-2-answers-A" value="A" onclick='check_back(1)'/>
-					<label for="question-2-answers-A"><img src="./black.jpg"></label>
+					<label for="question-2-answers-A"><img src="./black.jpg" width="300px" height="90px"></label>
 				</div>
 				<div>
 					<input type="radio" name="question-2-answers" id="question-2-answers-B" value="B" onclick='check_back(2)'/>
@@ -67,12 +78,6 @@
 		</form>
 		</div>
 		<br/>
-	
-	<div id="imagedest">
-	</div>
-	
-	<div id="backdest">
-	</div>
 
 </body>
 </html>

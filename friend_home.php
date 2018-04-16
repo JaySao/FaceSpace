@@ -3,10 +3,16 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html>
-<head>
+<header>
 	<title>FaceSpace</title>
 	<link rel="stylesheet" href="./styler.css">
-</head>
+	<style type="text/css">
+		header {
+			background-color: #3B5998;
+    		height: 150px;
+    	}
+	</style>
+</header>
 
 <body>
 <?php
@@ -100,7 +106,7 @@ print("<div class='row'>");
 
 	print("</div>");
 
-	print("<div class='column right'>");
+	print("<div class='column right wallpost'>");
 		print("<form action='change_wall.php' method='POST'>
 				<input type='text' placeholder='Write on Wall' name='wall'>
 				<input type='submit' value='Write!'>

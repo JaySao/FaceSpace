@@ -24,19 +24,19 @@ function check_logo(imagevalue) {
 function check_back(backvalue) {
             switch (backvalue) {
             case 1:
-                document.getElementById("backdest").innerHTML = "<img src='./black.jpg'>";
+                document.getElementById("backdest").innerHTML = "<img src='./black.jpg' width='300px' height='90px'>";
                 break;
             case 2:
-                document.getElementById("backdest").innerHTML = "<img src='./blue.jpg'>";
+                document.getElementById("backdest").innerHTML = "<img src='./blue.jpg' width='300px' height='90px'>";
                 break;
             case 3:
-                document.getElementById("backdest").innerHTML = "<img src='./slate.jpg'>";
+                document.getElementById("backdest").innerHTML = "<img src='./slate.jpg' width='300px' height='90px'>";
                 break;
 			case 4:
-                document.getElementById("backdest").innerHTML = "<img src='./purple.jpg'>";
+                document.getElementById("backdest").innerHTML = "<img src='./purple.jpg' width='300px' height='90px'>";
                 break;
 			case 5:
-                document.getElementById("backdest").innerHTML = "<img src='./wood.jpg'>";
+                document.getElementById("backdest").innerHTML = "<img src='./wood.jpg' width='300px' height='90px'>";
                 break;
             }
 }
