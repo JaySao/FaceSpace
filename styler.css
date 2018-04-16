@@ -45,7 +45,9 @@ h4 {
   to { width: 100% }
 }
 
-
+#imagedest,#backdest{
+	position:absolute;
+}
 
 
 #icon {
