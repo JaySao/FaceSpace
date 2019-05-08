@@ -4,10 +4,16 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html>
-<head>
+<header>
 	<title>FaceSpace</title>
 	<link rel="stylesheet" href="./styler.css">
-</head>
+	<style type="text/css">
+		header {
+			background-color: #3B5998;
+    		height: 150px;
+    	}
+    </style>
+</header>
 
 <body>
 <?php
@@ -20,8 +26,8 @@ $logged=$_SESSION['LoggedIn'];
 <div class="pagewrap" style="background-image: url('<?php echo $background;?>')">
 	<div id="navbar">
 		<div id="profilepic">
-			<a href="edit_profile.html">Edit Profile</a>
-			<a href='logout.php'>LOGOUT</a>
+			<a href="edit_profile.html" style="color:white;">Edit Profile</a>
+			<a href='logout.php' style="color:white;">LOGOUT</a>
 			
 		
 		<?php
@@ -96,7 +102,7 @@ print("<div class='row'>");
 		
 	print("</div>");
 	
-	print("<div class='column right'>");	
+	print("<div class='column right wallpost'>");	
 		print('<h4>Your wall posts are: </h4>');
 		//TODO: Add if statement, if(null)=>Do not print
 		print('<br>');

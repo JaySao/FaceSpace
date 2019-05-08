@@ -3,10 +3,16 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html>
-<head>
+<header>
 	<title>FaceSpace</title>
 	<link rel="stylesheet" href="./styler.css">
-</head>
+	<style type="text/css">
+		header {
+			background-color: #3B5998;
+    		height: 150px;
+    	}
+	</style>
+</header>
 
 <body>
 <?php
@@ -54,7 +60,12 @@ $sql1 = "SELECT * FROM wallposts WHERE Username ='$friendname'";
 			<a href='user_home.php'>HOME</a>
 		<?php
 		print($flogged);
-		print("<h1>". $friendname." </h1>");
+		print("<h1>". $friendname." ");
+		if($flogged==0){
+				print("<img style='height:20px; width:20px;' id='logicon' src='./offline.png'></h1>");
+			}else{
+				print("<img style='height:20px; width:20px;' id='logicon' src='./online.png'></h1>");
+			}
 		//print("<h4>Your icon is: </h4>");
 		//print($_SESSION['Icon']);
 		//print("<h4>Your background is: </h4>")
@@ -74,10 +85,16 @@ print("<div class='row'>");
 		if(mysql_num_rows($result)>0){
 			while($row = mysql_fetch_assoc($result)){
 				$friends = $row["Username"];
+				$friendLogged = $row["LoggedIn"];
 				if($friends == $originaluser){
-
+					
 				}else{
-				print("<div id='friends'><a href='friend_home.php?fname=$friends'>$friends</a><br/> </div>");
+				print("<div id='friends'><a href='friend_home.php?fname=$friends'>$friends</a>");
+					if($friendLogged==0){
+						print("<img style='height:20px; width:20px;' id='logicon' src='./offline.png'><br/> </div>");
+					}else{
+						print("<img style='height:20px; width:20px;' id='logicon' src='./online.png'><br/> </div>");
+					}
 				}
 			}
 		}
@@ -89,7 +106,7 @@ print("<div class='row'>");
 
 	print("</div>");
 
-	print("<div class='column right'>");
+	print("<div class='column right wallpost'>");
 		print("<form action='change_wall.php' method='POST'>
 				<input type='text' placeholder='Write on Wall' name='wall'>
 				<input type='submit' value='Write!'>

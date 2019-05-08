@@ -7,6 +7,7 @@
 header {
     background-color: #3B5998;
     height: 150px;
+    opacity: 1;
 }
 
 h1 {
@@ -25,6 +26,27 @@ h3 {
 
 h4 {
 	color:white;
+}
+
+.typewriter h1 {
+  color: #fff;
+  float: left;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap;  /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 5s steps(30, end),
+    blink-caret .1s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+#imagedest,#backdest{
+	position:absolute;
 }
 
 
@@ -79,15 +101,24 @@ h4 {
 .left {
     float: left;
     padding-left: 200px;
+    padding-right: 50px;
     text-align: left;
     width: 50%;
 }
 
-.right {
-    padding-left: 30px;
-    float: right;
-  width: 50%;
 
+
+.right {
+    padding-left: 80px;
+    float: right;
+    width: 50%;
+
+}
+
+.wallpost {
+    background-color: rgba(211,211,211,0.5);
+    margin-right: 100px;
+    border-radius: 20px;
 }
 
 .right img {
